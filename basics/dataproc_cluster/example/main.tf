@@ -2,7 +2,7 @@
 module "la_dataproc" {
   ## NOTE: Need to update the REMOTE path
   # source = "github.com/CloudVLab/terraform-lab-foundation//basics/dataproc_cluster/stable"
-  github.com/SureSkills/terraform-lab-foundation//basics/dataproc_cluster/stable
+  source = "github.com/SureSkills/terraform-lab-foundation//basics/dataproc_cluster/stable"
 
   # Pass values to the module
   gcp_project_id = var.gcp_project_id
