@@ -25,4 +25,5 @@ resource "google_cloudbuild_trigger" "filename-trigger" {
   }
 
   filename = "cloudbuild.yaml"
-}}
+}
+}
