@@ -1,5 +1,4 @@
 resource "google_cloudbuild_trigger" "build-trigger" {
-  location = "global"
 
   trigger_template {
     branch_name = "main"
@@ -12,11 +11,6 @@ resource "google_cloudbuild_trigger" "build-trigger" {
       args = ["cp", "gs://mybucket/remotefile.zip", "localfile.zip"]
       timeout = "120s"
       secret_env = ["MY_SECRET"]
-    }
-
-    step {
-      name   = "ubuntu"
-      script = "echo hello" # using script field
     }
 
     source {
